@@ -14,7 +14,11 @@ if __name__ == "__main__":
     database = "MWDD-export.csv"
     database = open(database)
 
+<<<<<<< HEAD
     newdatabase = open('MWDD-export.save','w')
+=======
+    newdatabase = open('MWDD-export2.csv','w')
+>>>>>>> 063f4ace563e8d61c0c034d58193ef9fa6054f59
 
     for line in database:
         star, sptype = line.strip().split(',')

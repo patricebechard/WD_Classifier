@@ -10,6 +10,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import sys
 
+<<<<<<< HEAD
 actv = 0					#0: logistic, 1: tanh, 2: ReLU
 optim_function = 0 			#0: AdamOptimizer, 1: Gradient descent, 2: RMS Prop, 3: AdaGrad
 learning_rate = 0.01
@@ -123,10 +124,30 @@ def train_network(train_set, valid_set,n_units, results):
 		acc_results = sess.run(accuracy, feed_dict={x: valid_data_x, y: valid_data_y})
 		print(acc_results)
 		results.write(str(acc_results)+'\n\n')
+=======
+actv = 2					#0: logistic, 1: tanh, 2: ReLU
+optim_function = 0 			#0: AdamOptimizer, 1: Gradient descent, 2: RMS Prop, 3: AdaGrad
+eta = 0.001					#learning rate
+
+RANDOM_SEED = 123
+tf.set_random_seed(RANDOM_SEED)
+
+#--------------------------------Classes----------------------------------------
+
+
+
+
+#--------------------------------Functions--------------------------------------
+
+
+
+
+>>>>>>> 063f4ace563e8d61c0c034d58193ef9fa6054f59
 
 #--------------------------------Main-------------------------------------------
 
 if __name__ == '__main__':
+<<<<<<< HEAD
 
 	results = open('log.txt','w')
 	results.write('number of hidden layers : %d\n'%n_hidden_layers)
@@ -177,4 +198,9 @@ if __name__ == '__main__':
 		raise Exception ("only one or two layers are supported")
 
 	results.close()
+=======
+	dataset = 'preprocessed_data_copy.txt'
+	data = np.loadtxt(dataset)
+	print(data[0])
+>>>>>>> 063f4ace563e8d61c0c034d58193ef9fa6054f59
 
